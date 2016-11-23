@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <title>Progetto 2</title>
+    </head>
+    <body>
+    <h1>Progetto 2</h1>
+        <br>
+        <label>Inserisci ID dipendente </label>
+        <form action="/cerca_dipendente" method="post" name="form_cerca_dipendente" id="form_cerca_dipendenti">
+            <input input type="text" id="id_cerca_dipendente" name="id_cerca_dipendente">
+            <button>Cerca dipendente</button>
+        </form>
+        <form action="/cancella_dipendente" method="post" name="id_cancella_dipendente" id="form_cerca_dipendente">
+            <input input type="text" id="id_cancella_dipendente" name="id_cancella_dipendente">
+            <button>Cancella dipendente</button>
+        </form>
+        <div class="div_dipendenti" id="div_dipendenti">
+            <table>
+                <tr>
+                    <br>
+                    <td>ID</td>
+                    <td><p id="id" name="id"></p></td>
+                </tr>
+                <tr>
+                    <td>Nome</td>
+                    <td><p id="nome" name="nome"></p></td>
+                </tr>
+                <tr>
+                    <td>Cognome</td>
+                    <td><p id="cognome" name="cognome"></p></td>
+                </tr>
+                <tr>
+                    <td>Livello stipendio</td>
+                    <td><p id="livello_stipendio" name="livello_stipendio"></p></td>
+                </tr>
+            </table>
+        </div>    
+    <br><br>
+    <button onclick="visibile_invisibile()">Nuovo dipendente</button>
+    <br><br>    
+    <form action="/client" method="post" id="form_input_dipendenti" class="form_input_dipendenti">
+        <table>
+            <tr>
+                <td>ID</td>
+                    <td><input type="text" id="input_id" name="input_id" ><br></td>
+                </tr>
+                <tr>
+                    <td>Nome</td>
+                    <td><input type="text" id="input_nome" name="input_nome" ><br></td>
+                </tr>
+                <tr>
+                    <td>Cognome</td>
+                    <td><input type="text" id="input_cognome" name="input_cognome"><br></td>
+                </tr>
+                <tr>
+                    <td>Livello stipendio</td>
+                    <td><input type="text" id="input_livello_stipendio" name="input_livello_stipendio"></td>
+                </tr>
+            </table>
+            <br>
+        <button type="button" onclick="submit()">Aggiungi dipendente</button>
+    </form>
+    <script src="script.js"></script>    
+</body>
+</html>
